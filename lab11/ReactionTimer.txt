@@ -1,0 +1,72 @@
+// Reaction Timer
+// <Jonathan Starkey>
+// <81075>
+import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class ReactionTimer extends JFrame
+	// [Add Listener Code 1]
+{
+	// [Base Code]
+	// Game state
+	final double GAME_DURATION = 30.0; // 30 seconds
+	int numRight;
+	int numWrong;
+	double timeLeft;
+	String centerText = "(1)";
+	Random rng;
+	// [Add Menu Code 1]
+	// [Add Button Code 1]
+	// [Add Center Panel Code 1]
+	// [Add Timer Code 1]
+	// [Base Code]
+	public static void main(String args[])
+	{
+	// [Add Your Name and section number Below]
+	ReactionTimer rt = new ReactionTimer("<Jonathan Starkey>, Section <81075>");
+	rt.setVisible(true);
+	}
+	// [Base Code]
+	public ReactionTimer(String title)
+	{
+		setSize(600, 600);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle(title);
+		// [Add Menu Code 2]
+		// [Add Button Code 2]
+		// [Add Center Panel Code 2]
+		// [Add Listener Code 2]
+		// [Add Timer Code 2]
+		// [Base Code]
+		resetGame();
+		timeLeft = 0.0;
+		updateView();
+	}
+	// [Base Code]
+	public void resetGame()
+	{
+		numRight = 0;
+		numWrong = 0;
+		timeLeft = GAME_DURATION;
+		String centerText = "(1)";
+		rng = new Random(new Date().getTime());
+		updateView();
+	}
+	// [Base Code]
+	public void actionPerformed(ActionEvent e)
+	{
+		Object source = e.getSource();
+		String command = e.getActionCommand();
+		System.out.println(command);
+		// [Add Menu Code 3]
+		// [Add Timer Code 3]
+		// [Add Button Code 3]
+	}
+	// [Base Code]
+	void updateView()
+	{
+		// [ADD Center Panel Code 2]
+		repaint();
+	}
+}

@@ -1,0 +1,32 @@
+Jonathan Starkey
+61075
+
+Q1:
+Circle    radius:2.0 Area=12.56   Perimeter=12.56
+Triangle  side:3.0   Triangle area= 3.8971143170299736  Triangle Perimeter= 9.0
+Rectangle width:4.0  Height:2.0 Area=8.0 Perimeter=12.0
+
+Q2: Found me!
+
+Q3: Error: Could not find or load main class Lab10
+
+Q4: Error: Could not find or load main class myDir.Lab10
+
+Q5: 
+c:\lab10>java -classpath myDir Lab10
+Found me!
+
+Q6: 
+'myDir.Lab10' is not recognized as an internal or external command,
+operable program or batch file.
+
+Q7: home/
+
+Q8:
+added manifest
+adding: Rectangle.class(in = 1156) (out= 596)(deflated 48%)
+adding: EquilateralTriangle.class(in = 937) (out= 525)(deflated 43%)
+adding: ObjectCalculator.class(in = 1219) (out= 742)(deflated 39%)
+
+
+

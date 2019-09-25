@@ -1,0 +1,44 @@
+//========================================
+//Semester : <fall 2016>
+// <Jonathan Starkey>
+// 61075
+//=========================================
+
+
+
+Q1: double[] myDoubles;
+Q2: 0
+Q3: null
+Q4: 
+for (int i=0; i<y.length; i++)
+{
+	y[i] = y[i]+1;
+}
+Q5: 
+a[i] = 0
+a[i] = 1
+a[i] = 2
+a[i] = 3
+Q6:
+a[i] = 1
+a[i] = 2
+a[i] = 3
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
+        at Lab6a.main(Lab6a.java:14)
+Q7:
+for (int i=a.length -1; i>=0;i--)
+{
+	System.out.println("a[i] = " + a[i]);
+}
+Q8:
+3
+18
+-60
+Q9:
+String s = "fun string";
+String[] ss = new String[1000];
+for (int i = 0; i<=999;i++)
+		{
+			ss[i] = s;
+		}
+Q10: 1000 

@@ -1,0 +1,129 @@
+import java.util.*;
+import java.io.*;
+public class Program6
+{
+    private static HashMap<String,Integer> memory = new HashMap<>();
+    public static void main(String args[])
+    {
+        System.out.println("Servando Hernandez");
+        System.out.println("RPN command line calculator");
+        Scanner scan = new Scanner(System.in);
+        System.out.print(">");
+        while(scan.hasNextLine())
+        {
+            System.out.print("> ");
+            String a = scan.nextLine(); 
+            String b = "quit";
+            String c = "mem";
+            String d = "clear";
+
+            if(a.equals(b))
+            { 
+                System.exit(0);
+            }
+            else
+            {
+                System.out.println(compute(a));
+            }
+            System.out.print(">");
+
+            List<String> list = new ArrayList<String>();
+            if(!a.isEmpty())
+            {
+                StringTokenizer var = new StringTokenizer(a);
+                while(var.hasMoreTokens())
+                {
+                    list.add(var.nextToken());
+                }
+            }
+            int pos = 0;
+            if (compute(a) != null)
+            {
+                pos = Integer.parseInt(compute(a));
+            }
+
+
+
+            memory.put(list.get(list.size()-1),pos);
+
+
+        }   
+
+
+    }
+
+
+
+    public static String compute(String input)
+    {
+        List<String> processedList = new ArrayList<String>();
+        if (!input.isEmpty()) 
+        {
+            String myRegex = "[^a-zA-Z]";
+            StringTokenizer st = new StringTokenizer(input);
+            while (st.hasMoreTokens())
+            {
+                processedList.add(st.nextToken());
+                processedList.remove(myRegex);
+                processedList.remove("=");
+
+            }
+        } 
+        else
+        {
+            return "Error";
+        }
+        Stack<String> tempList = new Stack<String>();
+
+        Iterator<String> iter = processedList.iterator();
+
+        while (iter.hasNext())
+            {
+                String temp = iter.next();
+                if (temp.matches("[0-9]*"))
+                    {
+
+                    tempList.push(temp);
+                    }
+                    else if (temp.matches("[*-/+]")) 
+                    {
+
+                        if (temp.equals("*")) 
+                        {
+                            int rs = Integer.parseInt(tempList.pop());
+                            int ls = Integer.parseInt(tempList.pop());
+                            int result = ls * rs;
+                            tempList.push("" + result);
+                        } 
+                        else if (temp.equals("-")) 
+                        {
+                            int rs = Integer.parseInt(tempList.pop());
+                            int ls = Integer.parseInt(tempList.pop());
+                            int result = ls - rs;
+                            tempList.push("" + result);
+                        } 
+                        else if (temp.equals("/")) 
+                        {
+                            int rs = Integer.parseInt(tempList.pop());
+                            int ls = Integer.parseInt(tempList.pop());
+                            int result = ls / rs;
+                            tempList.push("" + result);
+                        } 
+                        else if (temp.equals("+")) 
+                        {
+                            int rs = Integer.parseInt(tempList.pop());
+                            int ls = Integer.parseInt(tempList.pop());
+                            int result = ls + rs;
+                            tempList.push("" + result);
+                        }
+
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
+            }
+
+        return tempList.pop();
+    }
+}

@@ -1,0 +1,40 @@
+//========================================
+//Semester : <fall 2016>
+// <Jonathan Starkey>
+// 61075
+//=========================================
+q1: In camel case the first letter in the first word of a variable is lower case then every begining letter of a new word after the first is capital.
+q2: In a class name the first letter of the first word is capitalized while in a variable it is not.
+q3: Equal with the above block. for instance if its and if statement the braces will go be directly in line with the if.
+q4: Because if we do not use proper indention then reading and error debugging is a complete and utter nightmare and anybody else who sees it will chastize you.
+q5: ALL_CAPS with an underscore inbetween words
+q6: 0.0 1 and 0
+q7: A, C, E 
+q8: a=int b=int c=int d=double e=double
+q9: As things get more complicated its very easy to find exceptions to what works and what doesn't from a primitive type and therefore it will become necessary for someone to create a custom class that can handle what needs to be done.
+q10: classes are more like a template and objects are more like a specific thing. ( I feel like this is a trick question...)
+q11: Static variables will share one copy of that variable with every instance of that class while a non static variable creates a different copy of each variable for each instance of the class.
+q12: 
+		public static int totalCarsManufactured;
+		public string carModel;
+q13:
+ Lab 3 for Jonathan Starkey
+Enter the title and section of the course.
+CS 1
+Enter two integer numbers :
+5 6
+Please enter a double value:
+5.8
+Please enter another double value:
+8.4
+Title: CS 1
+iA + iB = 11
+iA - iB = -1
+iA * iB = 30
+iA / iB = 0
+iA % iB = 5
+dA + dB = 14.2
+dA - dB = -2.6000000000000005
+dA * dB = 48.72
+dA / dB = 0.6904761904761905
+dA % dB = 5.8

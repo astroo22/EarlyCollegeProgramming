@@ -1,0 +1,13 @@
+//========================================
+//Semester : <fall 2016>
+// <Jonathan Starkey>
+// 61075
+//=========================================
+
+q1: a is not 3
+	done
+q2: Above four: 4.2
+q3: i = 1
+	i = 3
+	i = 7
+q4: java MyClass < myInput.txt
